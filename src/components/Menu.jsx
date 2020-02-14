@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import {Switch,Route} from "react-router-dom";
 
 export default function Menu()
 {
@@ -26,11 +25,11 @@ export default function Menu()
       <Link to="/" style = {listLinks}>About</Link>
       <Link to="/" style = {listLinks}>Add newKeg</Link>
 
-        <Link to="/" style = {listLinks}>Home</Link>
+        <Link to="/pathToList" style = {listLinks}>Kegs</Link>
         <Link to="/" style = {listLinks}>About</Link>
         <Link to="/" style = {listLinks}>Add newKeg</Link>
 
-          <Link to="/" style = {listLinks}>Home</Link>
+          <Link to="/pathToList" style = {listLinks}>Kegs</Link>
           <Link to="/" style = {listLinks}>About</Link>
           <Link to="/" style = {listLinks}>Add newKeg</Link>
     </div>

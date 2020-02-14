@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Navbar from "./Navbar";
 import Body from "./Body";
 import Menu from "./Menu";
+import ListOfKegs from "./ListOfKegs";
 
 export default function App()
 {
@@ -11,7 +12,10 @@ export default function App()
     <div>
       <Navbar/>
       <Menu/>
-      <Body/>
+      <Switch>
+        <Route exact path="/" component={Body}/>
+        <Route path="/pathToList" component={ListOfKegs}/>
+      </Switch>
     </div>
   );
 }

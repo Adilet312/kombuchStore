@@ -1,5 +1,5 @@
 import React from "react";
-import ListOfKegs from "./ListOfKegs";
+
 
 function Body()
 {
@@ -15,7 +15,7 @@ function Body()
   }
   return (
     <div style={styleBody}>
-      
+
 
     </div>
   );
