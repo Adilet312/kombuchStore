@@ -9,13 +9,14 @@ function Body()
     height: "800px",
     backgroundColor: '#00ACEE',
     border: "2px solid white",
-    marginTop: "42px"
+    marginTop: "1px"
 
 
   }
   return (
     <div style={styleBody}>
       
+
     </div>
   );
 }

@@ -16,21 +16,34 @@ function ListOfKegs()
       {
         name: "Amsterdam",
         brand: "Holland beer",
-        price: 3,
+        price: "3$",
         alcoholContent: "20%"
       },
       {
         name: "Carona",
         brand: "Mexican beer",
-        price: 2,
+        price: "2$",
         alcoholContent: "10%"
       },
       {
         name: "Holsten",
         brand: "German beer",
-        price: 5,
+        price: "5$",
+        alcoholContent: "30%"
+      },
+      {
+        name: "Holsten",
+        brand: "German beer",
+        price: "5$",
+        alcoholContent: "30%"
+      },
+      {
+        name: "Holsten",
+        brand: "German beer",
+        price: "5$",
         alcoholContent: "30%"
       }
+
   ];
 
   return (

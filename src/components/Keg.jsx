@@ -11,6 +11,7 @@ function Keg(props)
         <li>{props.price}</li>
         <li>{props.alcoholContent}</li>
       </ul>
+      <hr/>
     </div>
   );
 }
@@ -18,7 +19,7 @@ Keg.propTypes =
 {
   name: PropTypes.string,
   brand: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   alcoholContent: PropTypes.string
 };
 export default Keg;

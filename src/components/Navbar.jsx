@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 function Navbar()
 {
   var navContainer =
@@ -9,16 +8,6 @@ function Navbar()
     border: '2px',
     backgroundColor: '#00ACEE'
   };
-  var listLinks =
-  {
-    float: 'left',
-    fontSize: '20px',
-    border: '2px solid white',
-    color: 'white',
-    padding: '9px',
-    marginRight:'-1px',
-
-  }
   var inputSearch =
   {
     float: 'right',
@@ -44,11 +33,17 @@ function Navbar()
     backgroundColor: '#00ACEE',
     outline: 'none'
   }
+  var image =
+  {
+    width: "90px",
+    marginTop: "-10px",
+    border: "2px solid LightBlue",
+    borderRadius: "50px",
+    marginLeft: "16px"
+  }
   return (
      <div style={navContainer}>
-     <Link to="/" style = {listLinks}>Home</Link>
-     <Link to="/" style = {listLinks}>About</Link>
-     <Link to="/pathToForm" style = {listLinks}>Add newKeg</Link>
+     <img style = {image} src = "https://bluelti.com/wp-content/uploads/2018/06//group-1824145_640.png"></img>
      <button id='tweedId' style={inputKeg}>Keg</button>
      <input type='text' id='searchId' style={inputSearch} placeholder='Search'/>
      <br/>
