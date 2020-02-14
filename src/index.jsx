@@ -1,10 +1,8 @@
-var name = React.createElement('h1', {}, 'German Beer');
-var brand = React.createElement('h3', {}, 'Holsten');
-var price = React.createElement('h3', {}, '5$');
-var alcoholContent = React.createElement('h3', {}, "30%");
-var app = React.createElement('div', {}, name, brand, price, alcoholContent);
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
 ReactDOM.render(
-  app,
+  <App/>,
   document.getElementById('react-app-root')
 );
