@@ -1,11 +1,15 @@
 import React from "react";
-import ListOfKegs from "./ListOfKegs";
+import { Switch, Route } from 'react-router-dom';
+import Navbar from "./Navbar";
+import Body from "./Body";
 
 export default function App()
 {
+
   return (
     <div>
-      <ListOfKegs/>
+      <Navbar/>
+      <Body/>
     </div>
   );
 }
