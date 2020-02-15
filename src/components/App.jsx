@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Body from "./Body";
 import Menu from "./Menu";
 import ListOfKegs from "./ListOfKegs";
+import CreateKeg from "./CreateKeg";
 
 export default function App()
 {
@@ -15,6 +16,7 @@ export default function App()
       <Switch>
         <Route exact path="/" component={Body}/>
         <Route path="/pathToList" component={ListOfKegs}/>
+        <Route path="/pathToForm" component={CreateKeg}/>
       </Switch>
     </div>
   );
