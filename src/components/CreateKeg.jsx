@@ -2,10 +2,63 @@ import React from "react";
 
 function CreateKeg()
 {
-  var inputStyle =
+  var frameStyle =
+  {
+    width: "30%",
+    marginLeft: "600px",
+    border: '2px solid LightBlue',
+    paddingTop: "40px"
+  }
+  var nameStyle =
   {
 
-    padding: '10px',
+    marginTop: "60px",
+    padding: '30px',
+    border: '2px solid LightBlue',
+    borderRadius: '20px ',
+    textAlign: 'left',
+    marginRight: '40px',
+    fontSize: '18px'
+
+  }
+  var brandtyle =
+  {
+
+    marginTop: "60px",
+    padding: '30px',
+    border: '2px solid LightBlue',
+    borderRadius: '20px ',
+    textAlign: 'left',
+    marginRight: '40px',
+    fontSize: '18px'
+
+  }
+  var priceStyle =
+  {
+    marginTop: "60px",
+    padding: '30px',
+    border: '2px solid LightBlue',
+    borderRadius: '20px ',
+    textAlign: 'left',
+    marginRight: '40px',
+    fontSize: '18px'
+
+  }
+  var alcoholContentStyle =
+  {
+    marginTop: "60px",
+    padding: '30px',
+    border: '2px solid LightBlue',
+    borderRadius: '20px ',
+    textAlign: 'left',
+    marginRight: '40px',
+    fontSize: '18px'
+
+  }
+  var imageStyle =
+  {
+    marginTop: "60px",
+    padding: '30px',
     border: '2px solid LightBlue',
     borderRadius: '20px ',
     textAlign: 'left',
@@ -15,9 +68,9 @@ function CreateKeg()
   }
   var buttonStyle =
   {
-
-    padding: '10px',
-    width: '9%',
+    marginTop: "60px",
+    padding: '20px',
+    width: '17%',
     border: '2px solid LightBlue',
     borderRadius: '20px ',
     textAlign: 'center',
@@ -27,23 +80,23 @@ function CreateKeg()
 
   return(
     <div>
-      <form>
-        <input style ={inputStyle}
+      <form style={frameStyle}>
+        <input style ={nameStyle}
           type='text'
           id='name'
           placeholder='Name'/><br/>
-          <input style ={inputStyle}
+          <input style ={brandtyle}
             type='text'
             id='brand'
             placeholder='Brand'/><br/>
-        <input style ={inputStyle}
+        <input style ={priceStyle}
           type='text'
           id='price'
           placeholder='Price'/><br/>
-        <input style ={inputStyle}
+        <input style ={alcoholContentStyle}
           id='alcoholContent'
           placeholder='Alcohol Content.'/><br/>
-        <input style ={inputStyle}
+        <input style ={imageStyle}
             type='text'
             id='img'
             placeholder='Image'/><br/>
