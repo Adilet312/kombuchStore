@@ -8,8 +8,9 @@ export default function Menu()
     width: "100%",
     padding:"interval",
     height:"23px",
-    backgroundColor: "#00ACEE",
-    marginTop: "-12px"
+    backgroundColor: "#918B90",
+    marginTop: "-15px",
+    border: "2px solid grey"
 
   }
   var listLinks =

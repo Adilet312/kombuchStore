@@ -12,7 +12,9 @@ function ListOfKegs()
       padding: "10px",
       positive: "relative",
       display: "inline-block",
-      border: "2px solid grey"
+      border: "2px solid white",
+      backgroundColor: "#918B90",
+      borderRadius: "20px"
     }
     var list =
     [
