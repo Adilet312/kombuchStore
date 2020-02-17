@@ -4,12 +4,13 @@ function Navbar()
 {
   var navContainer =
   {
-    width: "95.2%",
+    width: "100%",
     padding: '40px',
     marginBottom: '15px',
     border: '2px',
     backgroundColor: '#918B90',
-    border: "2px solid grey"
+    border: "2px solid grey",
+    paddingLeft: "0px"     
   };
   var inputSearch =
   {
@@ -34,6 +35,7 @@ function Navbar()
     fontSize: '18px',
     color: "black",
     backgroundColor: 'white',
+    marginRight: '60px',
     outline: 'none'
   }
   var image =
