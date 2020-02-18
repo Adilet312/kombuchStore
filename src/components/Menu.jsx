@@ -15,10 +15,11 @@ export default function Menu()
   }
   var listLinks =
   {
-    fontSize: '18px',
+    float: 'left',
+    fontSize: '20px',
     color: 'white',
     padding: '2px',
-    marginRight: "60px"
+    marginRight: "90px"
   }
   return (
     <div style ={styleMenu}>

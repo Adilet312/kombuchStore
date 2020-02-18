@@ -5,12 +5,12 @@ function Navbar()
   var navContainer =
   {
     width: "100%",
-    padding: '40px',
-    marginBottom: '15px',
+    padding: '0px',
+    marginBottom: '16px',
     border: '2px',
     backgroundColor: '#918B90',
     border: "2px solid grey",
-    paddingLeft: "0px"     
+    paddingLeft: "-10px"
   };
   var inputSearch =
   {
@@ -20,9 +20,11 @@ function Navbar()
     border: '2px solid white',
     borderRadius: '20px ',
     textAlign: 'left',
-    marginRight: '40px',
+    marginTop: '45px',
+    marginRight: '60px',
     fontSize: '18px',
-    outline: 'none'
+    margin: '20px'
+
   }
   var inputKeg =
   {
@@ -35,13 +37,15 @@ function Navbar()
     fontSize: '18px',
     color: "black",
     backgroundColor: 'white',
-    marginRight: '60px',
-    outline: 'none'
+    marginRight: '30px',
+    marginTop: '45px',
+    margin: '20px'
+
   }
   var image =
   {
     width: "90px",
-    marginTop: "-10px",
+    marginTop: "10px",
     border: "2px solid white",
     borderRadius: "50px",
     marginLeft: "16px"

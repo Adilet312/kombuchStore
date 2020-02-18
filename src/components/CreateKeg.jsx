@@ -7,7 +7,7 @@ function CreateKeg()
     marginLeft: "600px",
     border: '2px solid white',
     paddingBottom: "20px",
-    marginTop: "15px",
+    marginTop: "7px",
     backgroundColor: "#918B90",
     borderRadius: "30px"
   }
