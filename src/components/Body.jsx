@@ -8,7 +8,8 @@ function Body()
   var imgStyling =
   {
       width: "100%",
-      border: "2px solid grey"
+      border: "2px solid grey",
+      paddingTop: "0px"
   }
   return (
     <div>

@@ -6,11 +6,11 @@ export default function Menu()
   var styleMenu =
   {
     width: "100%",
-    padding:"interval",
-    height:"23px",
+    height:"24px",
     backgroundColor: "#918B90",
     marginTop: "-15px",
-    border: "2px solid grey"
+    border: "2px solid grey",
+
 
   }
   var listLinks =
