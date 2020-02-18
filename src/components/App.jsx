@@ -5,6 +5,7 @@ import Body from "./Body";
 import Menu from "./Menu";
 import ListOfKegs from "./ListOfKegs";
 import CreateKeg from "./CreateKeg";
+import Error404 from "./Error404";
 
 
 export default function App()
@@ -18,6 +19,7 @@ export default function App()
           <Route exact path="/" component = {Body}/>
           <Route path="/pathToList" component = {ListOfKegs}/>
           <Route path="/pathToForm" component = {CreateKeg}/>
+          <Route component = {Error404}/>
         </Switch>
     </div>
   );

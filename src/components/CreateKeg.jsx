@@ -1,4 +1,5 @@
 import React from "react";
+import backgroundPicture from "../assets/images/background.jpg";
 function CreateKeg()
 {
   var frameStyle =
@@ -9,7 +10,8 @@ function CreateKeg()
     paddingBottom: "20px",
     marginTop: "7px",
     backgroundColor: "#918B90",
-    borderRadius: "30px"
+    borderRadius: "30px",
+    marginBottom: "10px"
   }
   var head_H3 =
   {
@@ -80,9 +82,18 @@ function CreateKeg()
     marginLeft: '100px',
     outline: 'none'
   }
+  var outerStyling =
+  {
+      width: "100%",
+      border: "2px solid grey",
+      paddingTop: "0px",
+      backgroundColor: "#E6D4D4"
+
+  }
 
   return(
-      <div>
+      <div style = {outerStyling}>
+
         <form style={frameStyle}>
             <h3 style={head_H3}>Create New Keg</h3>
             <input style ={nameStyle}

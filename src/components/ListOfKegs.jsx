@@ -3,6 +3,14 @@ import Keg from "./Keg";
 
 function ListOfKegs()
 {
+  var outerStyling =
+  {
+      width: "100%",
+      border: "2px solid grey",
+      paddingTop: "0px",
+      backgroundColor: "#E6D4D4"
+
+  }
   var stlyleList =
 
     {
@@ -57,18 +65,20 @@ function ListOfKegs()
   ];
 
   return (
-    <div style={stlyleList}>
-      {list.map((keg,idNumber) =>
-        <Keg
-          name = {keg.name}
-          brand = {keg.brand}
-          price = {keg.price}
-          alcoholContent = {keg.alcoholContent}
-          img = {keg.img}
-          key = {idNumber}/>
+    <div style={outerStyling}>
+      <div style={stlyleList}>
+        {list.map((keg,idNumber) =>
+          <Keg
+            name = {keg.name}
+            brand = {keg.brand}
+            price = {keg.price}
+            alcoholContent = {keg.alcoholContent}
+            img = {keg.img}
+            key = {idNumber}/>
 
-      )}
-    </div>
+        )}
+     </div>
+  </div>
   );
 }
 export default ListOfKegs;
