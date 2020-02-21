@@ -1,4 +1,6 @@
 import React from "react";
+import ConfirmationQuestions from "./ConfirmationQuestions";
+import CreateKeg from "./CreateKeg";
 import PropTypes from "prop-types";
 class NewKegController extends React.Component
 {
@@ -26,6 +28,11 @@ class NewKegController extends React.Component
     {
       currentConditionOfState = <ConfirmationQuestions OnEventHendlerConfirmation = {this.handlerChangingState}/>
     }
+    return(
+      <div>
+      {currentConditionOfState}
+      </div>
+    );
   }
 }
 NewKegController.propTypes =
