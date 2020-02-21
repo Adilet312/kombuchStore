@@ -1,26 +1,44 @@
 import React from "react";
 import { Switch, Route } from 'react-router-dom';
 import Navbar from "./Navbar";
-import Body from "./Body";
 import Menu from "./Menu";
 import ListOfKegs from "./ListOfKegs";
 import CreateKeg from "./CreateKeg";
+import NewKegController from "./NewKegController";
 import Error404 from "./Error404";
 
 
-export default function App()
+class App extends React.Component
 {
+  constructor(props)
+  {
+    super(props);
+    this.state =
+    {
+      kegList: []
+    }
+    this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
 
-  return (
-    <div>
-      <Navbar/>
-      <Menu/>
-        <Switch>
-          <Route exact path="/" component = {Body}/>
-          <Route path="/pathToList" component = {ListOfKegs}/>
-          <Route path="/pathToForm" component = {CreateKeg}/>
-          <Route component = {Error404}/>
-        </Switch>
-    </div>
-  );
+  }
+  handleAddingNewKeg(newKeg)
+  {
+    var tempKegList = this.state.kegList.slice();
+    tempKegList.push(newKeg);
+    this.setState({kegList: tempKegList});
+  }
+ render(){
+    return (
+      <div>
+        <Navbar/>
+        <Menu/>
+          <Switch>
+            <Route exact path="/" render={()=><ListOfKegs OnUpdatedList = {this.state.kegList}/>} />
+            <Route path="/newKeg" render={()=><NewKegController OnEventNewForm={this.handleAddingNewKeg}/>}/>
+            <Route component = {Error404}/>
+          </Switch>
+      </div>
+    );
+  }
 }
+
+export default App;

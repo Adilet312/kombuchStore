@@ -1,7 +1,8 @@
 import React from "react";
 import Keg from "./Keg";
+import PropTypes from "prop-types";
 
-function ListOfKegs()
+function ListOfKegs(props)
 {
   var outerStyling =
   {
@@ -24,50 +25,11 @@ function ListOfKegs()
       backgroundColor: "#918B90",
       borderRadius: "20px"
     }
-    var list =
-    [
-      {
-        name: "Amsterdam",
-        brand: "Holland beer",
-        price: "3$",
-        alcoholContent: "20%",
-        img: "https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
-      },
-      {
-        name: "Carona",
-        brand: "Mexican beer",
-        price: "2$",
-        alcoholContent: "10%",
-        img: "https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
-      },
-      {
-        name: "Holsten",
-        brand: "German beer",
-        price: "5$",
-        alcoholContent: "30%",
-        img: "https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
-      },
-      {
-        name: "Holsten",
-        brand: "German beer",
-        price: "5$",
-        alcoholContent: "30%",
-        img:"https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
-      },
-      {
-        name: "Holsten",
-        brand: "German beer",
-        price: "5$",
-        alcoholContent: "30%",
-        img: "https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
-      }
-
-  ];
 
   return (
     <div style={outerStyling}>
       <div style={stlyleList}>
-        {list.map((keg,idNumber) =>
+        {props.OnUpdatedList.map((keg,idNumber) =>
           <Keg
             name = {keg.name}
             brand = {keg.brand}
@@ -81,4 +43,48 @@ function ListOfKegs()
   </div>
   );
 }
+ListOfKegs.propTypes =
+{
+  OnUpdatedList: PropTypes.array
+}
 export default ListOfKegs;
+
+//   var list =
+//   [
+//     {
+//       name: "Amsterdam",
+//       brand: "Holland beer",
+//       price: "3$",
+//       alcoholContent: "20%",
+//       img: "https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
+//     },
+//     {
+//       name: "Carona",
+//       brand: "Mexican beer",
+//       price: "2$",
+//       alcoholContent: "10%",
+//       img: "https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
+//     },
+//     {
+//       name: "Holsten",
+//       brand: "German beer",
+//       price: "5$",
+//       alcoholContent: "30%",
+//       img: "https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
+//     },
+//     {
+//       name: "Holsten",
+//       brand: "German beer",
+//       price: "5$",
+//       alcoholContent: "30%",
+//       img:"https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
+//     },
+//     {
+//       name: "Holsten",
+//       brand: "German beer",
+//       price: "5$",
+//       alcoholContent: "30%",
+//       img: "https://cdn.xl.thumbs.canstockphoto.com/keg-of-beer-still-life-with-a-keg-of-beer-and-draft-beer-by-the-glass-stock-photography_csp21320502.jpg"
+//     }
+//
+// ];

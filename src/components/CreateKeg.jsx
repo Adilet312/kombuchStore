@@ -1,6 +1,7 @@
 import React from "react";
 import backgroundPicture from "../assets/images/background.jpg";
-function CreateKeg()
+import PropTypes from "prop-types";
+function CreateKeg(props)
 {
   let _name = null;
   let _brand = null;
@@ -11,6 +12,7 @@ function CreateKeg()
   function handlerNewTicketForm(event)
   {
     event.preventDefault();
+    props.OnEventNewForm({name: _name.value, brand: _brand.value,price: _price.value, alcoholContent: _alcoholContent.value,img: _img.value});
     _name = "";
     _brand = "";
     _price = "";
@@ -140,5 +142,9 @@ function CreateKeg()
           </form>
       </div>
   );
+}
+CreateKeg.propTypes =
+{
+  OnEventNewForm: PropTypes.func
 }
 export default CreateKeg;

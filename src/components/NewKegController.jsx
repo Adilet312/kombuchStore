@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 class NewKegController extends React.Component
 {
   constructor(props)
@@ -6,7 +7,7 @@ class NewKegController extends React.Component
     super(props)
     this.state =
     {
-      isTrueOrFalse: false;
+      isTrueOrFalse: false
     }
     this.handlerChangingState = this.handlerChangingState.bind(this);
   }
@@ -17,9 +18,9 @@ class NewKegController extends React.Component
   render()
   {
     var currentConditionOfState = null;
-    if(isTrueOrFalse!=false)
+    if(this.state.isTrueOrFalse)
     {
-      currentConditionOfState = <CreateKeg/>
+      currentConditionOfState = <CreateKeg OnEventNewForm ={this.props.OnEventNewForm}/>;
     }
     else
     {
@@ -27,3 +28,8 @@ class NewKegController extends React.Component
     }
   }
 }
+NewKegController.propTypes =
+{
+  OnEventNewForm: PropTypes.func
+}
+export default NewKegController;
