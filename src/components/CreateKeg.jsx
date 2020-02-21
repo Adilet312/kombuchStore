@@ -2,6 +2,22 @@ import React from "react";
 import backgroundPicture from "../assets/images/background.jpg";
 function CreateKeg()
 {
+  let _name = null;
+  let _brand = null;
+  let _price = null;
+  let _alcoholContent = null;
+  let _img = null;
+
+  function handlerNewTicketForm(event)
+  {
+    event.preventDefault();
+    _name = "";
+    _brand = "";
+    _price = "";
+    _alcoholContent = "";
+    _img = "";
+
+  }
   var frameStyle =
   {
     width: "30%",
@@ -94,27 +110,32 @@ function CreateKeg()
   return(
       <div style = {outerStyling}>
 
-        <form style={frameStyle}>
+        <form onSubmit={handlerNewTicketForm} style={frameStyle}>
             <h3 style={head_H3}>Create New Keg</h3>
             <input style ={nameStyle}
               type='text'
               id='name'
-              placeholder='Name'/><br/>
+              placeholder='Name'
+              ref={(input)=>{_name = input;}}/><br/>
             <input style ={brandtyle}
                 type='text'
                 id='brand'
-                placeholder='Brand'/><br/>
+                placeholder='Brand'
+                ref={(input)=>{_brand = input;}}/><br/>
             <input style ={priceStyle}
               type='text'
               id='price'
-              placeholder='Price'/><br/>
+              placeholder='Price'
+              ref={(input)=>{_price = input;}}/><br/>
             <input style ={alcoholContentStyle}
               id='alcoholContent'
-              placeholder='Alcohol Content.'/><br/>
+              placeholder='Alcohol Content.'
+              ref={(input)=>{_alcoholContent = input;}}/><br/>
             <input style ={imageStyle}
                 type='text'
                 id='img'
-                placeholder='Image'/><br/>
+                placeholder='Image'
+                ref={(input)=>{_img = input;}}/><br/>
               <button style ={buttonStyle} type='submit'>Create!</button>
           </form>
       </div>
