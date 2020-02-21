@@ -1,7 +1,7 @@
 import Background from '../assets/images/background.jpg';
 import React from 'react';
 
-function BackgroundImg(){
+function BackgroundImage(){
   var style = {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
@@ -9,9 +9,9 @@ function BackgroundImg(){
   };
   return(
     <div>
-      <img style={style} src={Background}/>
+      <img style={style} src={Background} alt="Background image"/>
     </div>
   );
 }
 
-export default BackgroundImg;
+export default BackgroundImage;

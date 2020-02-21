@@ -2,11 +2,12 @@ import React from "react";
 import { Switch, Route } from 'react-router-dom';
 import Navbar from "./Navbar";
 import Menu from "./Menu";
+import Body from "./Body";
 import ListOfKegs from "./ListOfKegs";
 import backgroundPicture from "../assets/images/background.jpg";
 import CreateKeg from "./CreateKeg";
 import NewKegController from "./NewKegController";
-import Error404 from "./Error404";
+// import Error404 from "./Error404";
 
 
 class App extends React.Component
@@ -28,26 +29,17 @@ class App extends React.Component
     this.setState({kegList: tempKegList});
   }
  render(){
-   var imgStyling =
-   {
-       backgroundImage: "url("+backgroundPicture+")",
-       width: "100%",
-       border: "2px solid grey",
-       paddingTop: "0px"
-   }
     return (
-      <div style ={imgStyling}>
         <div>
         <Navbar/>
         <Menu/>
         <Body/>
           <Switch>
-            <Route exact path="/" render={()=><ListOfKegs OnUpdatedList = {this.state.kegList}/>} />
+            <Route path="/listpath" render={()=><ListOfKegs OnUpdatedList = {this.state.kegList}/>} />
             <Route path="/newKeg" render={()=><NewKegController OnEventNewForm={this.handleAddingNewKeg}/>}/>
-            <Route component = {Error404}/>
+            //<Route component = {Error404}/>
           </Switch>
       </div>
-    </div>
     );
   }
 }
