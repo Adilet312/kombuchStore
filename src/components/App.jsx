@@ -7,7 +7,7 @@ import ListOfKegs from "./ListOfKegs";
 import backgroundPicture from "../assets/images/background.jpg";
 import CreateKeg from "./CreateKeg";
 import NewKegController from "./NewKegController";
-// import Error404 from "./Error404";
+
 
 
 class App extends React.Component
@@ -37,7 +37,6 @@ class App extends React.Component
           <Switch>
             <Route path="/listpath" render={()=><ListOfKegs OnUpdatedList = {this.state.kegList}/>} />
             <Route path="/newKeg" render={()=><NewKegController OnEventNewForm={this.handleAddingNewKeg}/>}/>
-            //<Route component = {Error404}/>
           </Switch>
       </div>
     );
