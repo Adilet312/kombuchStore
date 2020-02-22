@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Moment from 'moment';
 
 function Keg(props)
 {
@@ -34,6 +35,7 @@ function Keg(props)
         <li>{props.brand}</li>
         <li>{props.price}</li>
         <li>{props.alcoholContent}</li>
+        <li>{displayTimeProductPost(props.timeOpen)} ago posted</li>
       </ul>
       <button style = {buttonStyling}>Add</button>
       <img style={imgStyling} src = {props.img}/>
@@ -41,13 +43,18 @@ function Keg(props)
     </div>
   );
 }
+function displayTimeProductPost(timeOpen)
+{
+  return timeOpen.from(new Moment(),true);
+}
 Keg.propTypes =
 {
   name: PropTypes.string,
   brand: PropTypes.string,
   price: PropTypes.string,
   alcoholContent: PropTypes.string,
-  img:PropTypes.string
+  img:PropTypes.string,
+  timeOpen: PropTypes.instanceOf(Moment).isRequired
 
 };
 export default Keg;

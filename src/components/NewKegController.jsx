@@ -6,7 +6,7 @@ class NewKegController extends React.Component
 {
   constructor(props)
   {
-    super(props)
+    super(props);
     this.state =
     {
       isTrueOrFalse: false
@@ -15,7 +15,7 @@ class NewKegController extends React.Component
   }
   handlerChangingState()
   {
-    this.setState(isTrueOrFalse: true);
+    this.setState({isTrueOrFalse: true});
   }
   render()
   {

@@ -26,7 +26,7 @@ export default function Menu()
       <Link to="/" style = {listLinks}>Home</Link>
       <Link to="/" style = {listLinks}>About</Link>
       <Link to="/newKeg" style = {listLinks}>Add newKeg</Link>
-      <Link to="/listpath" style = {listLinks}>Kegs</Link>
+      <Link to="/" style = {listLinks}>Kegs</Link>
 
     </div>
   );

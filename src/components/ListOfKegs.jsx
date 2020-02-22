@@ -1,15 +1,21 @@
 import React from "react";
 import Keg from "./Keg";
 import PropTypes from "prop-types";
+import Background from '../assets/images/background.jpg';
 
 function ListOfKegs(props)
 {
+  console.log(props.OnUpdatedList);
   var outerStyling =
   {
-      width: "100%",
       border: "2px solid grey",
-      paddingTop: "0px",
-      backgroundColor: "#E6D4D4"
+      backgroundImage: 'url(' + Background + ')',
+      backgroundPosition: 'fixed',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'repeat',
+      minHeight: '100vh',
+      minWidth: '100%'
+
 
   }
   var stlyleList =
@@ -29,14 +35,15 @@ function ListOfKegs(props)
   return (
     <div style={outerStyling}>
       <div style={stlyleList}>
-        {props.OnUpdatedList.map((keg,idNumber) =>
+        {props.OnUpdatedList.map((keg) =>
           <Keg
             name = {keg.name}
             brand = {keg.brand}
             price = {keg.price}
             alcoholContent = {keg.alcoholContent}
             img = {keg.img}
-            key = {idNumber}/>
+            timeOpen = {keg.timeOpen}
+            key = {keg.id}/>
 
         )}
      </div>

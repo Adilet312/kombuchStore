@@ -1,6 +1,8 @@
 import React from "react";
 import backgroundPicture from "../assets/images/background.jpg";
 import PropTypes from "prop-types";
+import { v4 } from 'uuid';
+import Moment from 'moment';
 function CreateKeg(props)
 {
   let _name = null;
@@ -12,7 +14,7 @@ function CreateKeg(props)
   function handlerNewTicketForm(event)
   {
     event.preventDefault();
-    props.OnEventNewForm({name: _name.value, brand: _brand.value,price: _price.value, alcoholContent: _alcoholContent.value,img: _img.value});
+    props.OnEventNewForm({name: _name.value, brand: _brand.value,price: _price.value, alcoholContent: _alcoholContent.value,img: _img.value,id: v4(),timeOpen: new Moment()});
     _name = "";
     _brand = "";
     _price = "";

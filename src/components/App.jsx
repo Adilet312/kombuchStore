@@ -2,7 +2,6 @@ import React from "react";
 import { Switch, Route } from 'react-router-dom';
 import Navbar from "./Navbar";
 import Menu from "./Menu";
-import Body from "./Body";
 import ListOfKegs from "./ListOfKegs";
 import backgroundPicture from "../assets/images/background.jpg";
 import CreateKeg from "./CreateKeg";
@@ -33,9 +32,8 @@ class App extends React.Component
         <div>
         <Navbar/>
         <Menu/>
-        <Body/>
           <Switch>
-            <Route path="/listpath" render={()=><ListOfKegs OnUpdatedList = {this.state.kegList}/>} />
+            <Route exact path="/" render={()=><ListOfKegs OnUpdatedList = {this.state.kegList}/>} />
             <Route path="/newKeg" render={()=><NewKegController OnEventNewForm={this.handleAddingNewKeg}/>}/>
           </Switch>
       </div>
