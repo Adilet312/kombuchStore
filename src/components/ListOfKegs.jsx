@@ -42,7 +42,8 @@ function ListOfKegs(props)
             price = {keg.price}
             alcoholContent = {keg.alcoholContent}
             img = {keg.img}
-            timeOpen = {keg.timeOpen}
+            formattedWaitTime = {keg.formattedWaitTime}
+            currentRoutePath = {props.currentRoutePath}
             key = {keg.id}/>
 
         )}
@@ -52,7 +53,8 @@ function ListOfKegs(props)
 }
 ListOfKegs.propTypes =
 {
-  OnUpdatedList: PropTypes.array
+  OnUpdatedList: PropTypes.array,
+  currentRoutePath: PropTypes.string
 }
 export default ListOfKegs;
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import backgroundPicture from "../assets/images/symbol.png";
 
-function Error404(){
+function Error404(props){
   var errorStyle =
   {
     width: "500px",
@@ -15,8 +14,7 @@ function Error404(){
   }
   return (
     <div style={errorStyle}>
-      <h2>The page you are looking for does not exist!</h2>
-      <h3>Would you like to return <Link to="/">home</Link> instead?</h3>
+      <h2>The page {props.location.pathname} does not exist!</h2>
     </div>
   );
 }

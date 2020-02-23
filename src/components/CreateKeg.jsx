@@ -3,6 +3,7 @@ import backgroundPicture from "../assets/images/background.jpg";
 import PropTypes from "prop-types";
 import { v4 } from 'uuid';
 import Moment from 'moment';
+
 function CreateKeg(props)
 {
   let _name = null;

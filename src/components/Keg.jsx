@@ -28,25 +28,38 @@ function Keg(props)
     border: "2px solid LightBlue",
     marginLeft: "20px"
   }
-  return (
-    <div>
-      <ul>
-        <li>{props.name}</li>
-        <li>{props.brand}</li>
-        <li>{props.price}</li>
-        <li>{props.alcoholContent}</li>
-        <li>{displayTimeProductPost(props.timeOpen)} ago posted</li>
-      </ul>
-      <button style = {buttonStyling}>Add</button>
-      <img style={imgStyling} src = {props.img}/>
-      <hr/>
-    </div>
-  );
+  const kegInfo =
+  <div>
+    <ul>
+      <li>{props.name}</li>
+      <li>{props.brand}</li>
+      <li>{props.price}</li>
+      <li>{props.alcoholContent}</li>
+      <li>{props.formattedWaitTime} ago posted</li>
+    </ul>
+    <button style = {buttonStyling}>Add</button>
+    <img style={imgStyling} src = {props.img}/>
+    <hr/>
+  </div>;
+  if(props.currentRoutePath==="/Employer")
+  {
+    return(
+      <div onClick={() => {alert('hey, you just clicked the keg belonging to ' + props.name);}}>
+        {kegInfo}
+      </div>
+    );
+  }
+  else
+  {
+    return (
+      <div>
+        {kegInfo}
+      </div>
+    );
+  }
+
 }
-function displayTimeProductPost(timeOpen)
-{
-  return timeOpen.from(new Moment(),true);
-}
+
 Keg.propTypes =
 {
   name: PropTypes.string,
@@ -54,7 +67,8 @@ Keg.propTypes =
   price: PropTypes.string,
   alcoholContent: PropTypes.string,
   img:PropTypes.string,
-  timeOpen: PropTypes.instanceOf(Moment).isRequired
+  formattedWaitTime: PropTypes.string.isRequired,
+  currentRoutePath: PropTypes.string
 
 };
 export default Keg;
