@@ -1,5 +1,6 @@
 import React from "react";
 import Keg from "./Keg";
+import KegDetail from "./KegDetail";
 import PropTypes from "prop-types";
 import Background from '../assets/images/background.jpg';
 
@@ -44,6 +45,7 @@ function ListOfKegs(props)
             img = {keg.img}
             formattedWaitTime = {keg.formattedWaitTime}
             currentRoutePath = {props.currentRoutePath}
+            OnKegSelection = {props.OnKegSelection}
             key = {keg.id}/>
 
         )}
@@ -54,7 +56,8 @@ function ListOfKegs(props)
 ListOfKegs.propTypes =
 {
   OnUpdatedList: PropTypes.array,
-  currentRoutePath: PropTypes.string
+  currentRoutePath: PropTypes.string,
+  OnKegSelection:PropTypes.func
 }
 export default ListOfKegs;
 

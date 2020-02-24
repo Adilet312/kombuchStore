@@ -18,9 +18,11 @@ class App extends React.Component
     super(props);
     this.state =
     {
-      kegList: []
+      kegList: [],
+      selectedKeg: null
     }
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
+    this.handleUpdateKeg = this.handleUpdateKeg.bind(this);
 
   }
   handleAddingNewKeg(newKeg)
@@ -29,6 +31,11 @@ class App extends React.Component
     newKeg.formattedWaitTime = (newKeg.timeOpen).fromNow(true)
     tempKegList.push(newKeg);
     this.setState({kegList: tempKegList});
+  }
+  handleUpdateKeg(keg)
+  {
+    this.setState({selectedKeg:keg});
+    
   }
   componentDidMount()
   {
@@ -58,7 +65,7 @@ class App extends React.Component
           <Switch>
             <Route exact path="/" render={()=><ListOfKegs OnUpdatedList = {this.state.kegList}/>} />
             <Route path="/newKeg" render={()=><NewKegController OnEventNewForm={this.handleAddingNewKeg}/>}/>
-            <Route path="/Employer" render={(props)=><Employer OnUpdatedList={this.state.kegList} currentRoutePath={props.location.pathname}/>}/>
+            <Route path="/Employer" render={(props)=><Employer OnUpdatedList={this.state.kegList} currentRoutePath={props.location.pathname} OnKegSelection={this.handleUpdateKeg} selectedKeg={this.state.selectedKeg}/>}/>
             <Route component = {Error404}/>
           </Switch>
       </div>

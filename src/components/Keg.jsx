@@ -44,7 +44,7 @@ function Keg(props)
   if(props.currentRoutePath==="/Employer")
   {
     return(
-      <div onClick={() => {alert('hey, you just clicked the keg belonging to ' + props.name);}}>
+      <div onClick={() => {props.OnKegSelection({name: props.name, brand: props.brand, price: props.price, alcoholContent: props.alcoholContent, img: props.img, formattedWaitTime: props.formattedWaitTime});}}>
         {kegInfo}
       </div>
     );
@@ -68,7 +68,8 @@ Keg.propTypes =
   alcoholContent: PropTypes.string,
   img:PropTypes.string,
   formattedWaitTime: PropTypes.string.isRequired,
-  currentRoutePath: PropTypes.string
+  currentRoutePath: PropTypes.string,
+  OnKegSelection: PropTypes.func
 
 };
 export default Keg;
