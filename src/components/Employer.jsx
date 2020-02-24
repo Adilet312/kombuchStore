@@ -7,7 +7,7 @@ function Employer(props)
   let optionalSelectedKeg = null;
   if(props.selectedKeg !=null)
   {
-    optionalSelectedKeg = <KegDetail selectedKeg = {props.selectedKeg}/>
+    optionalSelectedKeg = <KegDetail selectedKeg = {props.OnUpdatedList[props.selectedKeg]}/>
   }
   return(
     <div>
@@ -24,6 +24,6 @@ Employer.propTypes =
   OnUpdatedList: PropTypes.array,
   currentRoutePath: PropTypes.string.isRequired,
   OnKegSelection: PropTypes.func.isRequired,
-  selectedKeg: PropTypes.object
+  selectedKeg: PropTypes.string
 };
 export default Employer;

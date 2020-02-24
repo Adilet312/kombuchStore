@@ -9,6 +9,7 @@ import NewKegController from "./NewKegController";
 import Employer from "./Employer";
 import Moment from "moment";
 import Error404 from "./Error404";
+import {v4} from "uuid";
 
 
 class App extends React.Component
@@ -18,7 +19,7 @@ class App extends React.Component
     super(props);
     this.state =
     {
-      kegList: [],
+      kegList: {},
       selectedKeg: null
     }
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
@@ -27,15 +28,17 @@ class App extends React.Component
   }
   handleAddingNewKeg(newKeg)
   {
-    var tempKegList = this.state.kegList.slice();
-    newKeg.formattedWaitTime = (newKeg.timeOpen).fromNow(true)
-    tempKegList.push(newKeg);
+    var newKegId = v4();
+    var tempKegList = Object.assign({},this.state.kegList,{
+      [newKegId]:newKeg
+    });
+    tempKegList[newKegId].formattedWaitTime = tempKegList[newKegId].timeOpen.fromNow(true);
     this.setState({kegList: tempKegList});
   }
-  handleUpdateKeg(keg)
+  handleUpdateKeg(kegId)
   {
-    this.setState({selectedKeg:keg});
-    
+    this.setState({selectedKeg:kegId});
+
   }
   componentDidMount()
   {
@@ -46,12 +49,11 @@ class App extends React.Component
   }
   updateElapsedWaitTime()
   {
-    console.log('check');
-    let tempKegList  = this.state.kegList.slice();
-    tempKegList.forEach((keg)=>
-    keg.formattedWaitTime = (keg.timeOpen).fromNow(true)
-    );
-    this.setState({kegList:tempKegList})
+    let tempKegList  = Object.assign({},this.state.kegList);
+    Object.keys(tempKegList).forEach(kegId =>{
+    tempKegList[kegId].formattedWaitTime = (tempKegList[kegId].timeOpen).fromNow(true);
+  });
+    this.setState({kegList:tempKegList});
   }
   componentWillUnmount()
   {
@@ -72,5 +74,4 @@ class App extends React.Component
     );
   }
 }
-
 export default App;

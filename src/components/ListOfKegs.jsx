@@ -1,6 +1,5 @@
 import React from "react";
 import Keg from "./Keg";
-import KegDetail from "./KegDetail";
 import PropTypes from "prop-types";
 import Background from '../assets/images/background.jpg';
 
@@ -36,26 +35,27 @@ function ListOfKegs(props)
   return (
     <div style={outerStyling}>
       <div style={stlyleList}>
-        {props.OnUpdatedList.map((keg) =>
-          <Keg
-            name = {keg.name}
-            brand = {keg.brand}
-            price = {keg.price}
-            alcoholContent = {keg.alcoholContent}
-            img = {keg.img}
-            formattedWaitTime = {keg.formattedWaitTime}
-            currentRoutePath = {props.currentRoutePath}
-            OnKegSelection = {props.OnKegSelection}
-            key = {keg.id}/>
-
-        )}
-     </div>
-  </div>
+        {Object.keys(props.OnUpdatedList).map(function(kegId)
+          {
+            var keg = props.OnUpdatedList[kegId];
+            return <Keg
+                        name={keg.name}
+                        brand={keg.brand}
+                        price={keg.price}
+                        alcoholContent={keg.alcoholContent}
+                        formattedWaitTime={keg.formattedWaitTime}
+                        currentRoutePath={props.currentRoutePath}
+                        key={kegId}
+                        kegId={kegId}
+                        OnKegSelection={props.OnKegSelection}/>;
+                    })}
+          </div>
+        </div>
   );
 }
 ListOfKegs.propTypes =
 {
-  OnUpdatedList: PropTypes.array,
+  OnUpdatedList: PropTypes.object,
   currentRoutePath: PropTypes.string,
   OnKegSelection:PropTypes.func
 }

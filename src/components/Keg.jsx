@@ -44,7 +44,7 @@ function Keg(props)
   if(props.currentRoutePath==="/Employer")
   {
     return(
-      <div onClick={() => {props.OnKegSelection({name: props.name, brand: props.brand, price: props.price, alcoholContent: props.alcoholContent, img: props.img, formattedWaitTime: props.formattedWaitTime});}}>
+      <div onClick={() => {props.OnKegSelection(props.kegId);}}>
         {kegInfo}
       </div>
     );
@@ -69,7 +69,8 @@ Keg.propTypes =
   img:PropTypes.string,
   formattedWaitTime: PropTypes.string.isRequired,
   currentRoutePath: PropTypes.string,
-  OnKegSelection: PropTypes.func
+  OnKegSelection: PropTypes.func,
+  kegId: PropTypes.string.isRequired
 
 };
 export default Keg;
