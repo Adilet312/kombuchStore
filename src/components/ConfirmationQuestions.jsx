@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import NewKegController from "./NewKegController";
 function ConfirmationQuestions(props){
   var stlyleList =
   {
@@ -13,7 +12,7 @@ function ConfirmationQuestions(props){
       border: "2px solid white",
       backgroundColor: "#918B90",
       borderRadius: "20px"
-    }
+    };
     var buttonStyling =
     {
       padding: "10px",
@@ -21,14 +20,14 @@ function ConfirmationQuestions(props){
       borderRadius: "20px",
       border: "2px solid LightBlue",
       marginLeft: "40%"
-    }
+    };
     var head_H2 =
     {
       fontSize: "30px",
       color: "black",
       backgroundPosition: "center",
       paddingLeft: "27%"
-    }
+    };
   return (
     <div style={stlyleList}>
       <h2 style={head_H2}>Are you member of this store?</h2>
@@ -40,5 +39,5 @@ function ConfirmationQuestions(props){
 ConfirmationQuestions.propType =
 {
   OnEventHendlerConfirmation: PropTypes.func
-}
+};
 export default ConfirmationQuestions;

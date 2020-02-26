@@ -3,11 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import Navbar from "./Navbar";
 import Menu from "./Menu";
 import ListOfKegs from "./ListOfKegs";
-import backgroundPicture from "../assets/images/background.jpg";
-import CreateKeg from "./CreateKeg";
 import NewKegController from "./NewKegController";
 import Employer from "./Employer";
-import Moment from "moment";
 import Error404 from "./Error404";
 import {v4} from "uuid";
 import Background from '../assets/images/background.jpg';
@@ -22,7 +19,7 @@ class App extends React.Component
     {
       kegList: {},
       selectedKeg: null
-    }
+    };
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
     this.handleUpdateKeg = this.handleUpdateKeg.bind(this);
 
@@ -58,9 +55,9 @@ class App extends React.Component
   }
   componentWillUnmount()
   {
-    clearInterval(this.waitTimeUpdated)
+    clearInterval(this.waitTimeUpdated);
   }
- render(){
+ render() {
    var styleImg =
    {
      backgroundImage: 'url(' + Background + ')',

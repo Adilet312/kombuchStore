@@ -10,7 +10,7 @@ class NewKegController extends React.Component
     this.state =
     {
       isTrueOrFalse: false
-    }
+    };
     this.handlerChangingState = this.handlerChangingState.bind(this);
   }
   handlerChangingState()
@@ -26,7 +26,7 @@ class NewKegController extends React.Component
     }
     else
     {
-      currentConditionOfState = <ConfirmationQuestions OnEventHendlerConfirmation = {this.handlerChangingState}/>
+      currentConditionOfState = <ConfirmationQuestions OnEventHendlerConfirmation = {this.handlerChangingState}/>;
     }
     return(
       <div>
@@ -38,5 +38,5 @@ class NewKegController extends React.Component
 NewKegController.propTypes =
 {
   OnEventNewForm: PropTypes.func
-}
+};
 export default NewKegController;

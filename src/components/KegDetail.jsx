@@ -14,7 +14,7 @@ var stlyleList =
     border: "2px solid white",
     backgroundColor: "#918B90",
     borderRadius: "20px"
-  }
+  };
 
 var imgStyling =
 {
@@ -22,7 +22,7 @@ var imgStyling =
     padding: "10px",
     float: "right",
     marginTop: "-113px"
-}
+};
 
 var buttonStyling =
 {
@@ -31,7 +31,7 @@ var buttonStyling =
   borderRadius: "20px",
   border: "2px solid LightBlue",
   marginLeft: "20px"
-}
+};
   return (
     <div style={stlyleList}>
       <hr/>
@@ -52,5 +52,5 @@ var buttonStyling =
 KegDetail.propTypes =
 {
   selectedKeg: PropTypes.object
-}
+};
 export default KegDetail;

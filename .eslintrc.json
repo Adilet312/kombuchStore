@@ -1,6 +1,7 @@
 {
     "env": {
         "browser": true,
+        "node": true,
         "es6": true
     },
     "extends": "eslint:recommended",
@@ -15,16 +16,22 @@
         "react"
     ],
     "rules": {
+        "react/jsx-key": 2,
+        "react/jsx-uses-vars": 2,
+        "react/jsx-uses-react": 2,
+        "plugins": [
+            "react"
+        ],
         "indent": [
-            "error",
-            0
+            "warn",
+            2
         ],
         "linebreak-style": [
             "error",
             "unix"
         ],
         "quotes": [
-            "error",
+            "warn",
             "double"
         ],
         "semi": [

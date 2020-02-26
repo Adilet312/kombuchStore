@@ -12,7 +12,7 @@ export default function Menu()
     border: "2px solid grey",
 
 
-  }
+  };
   var listLinks =
   {
     float: 'left',
@@ -20,7 +20,7 @@ export default function Menu()
     color: 'white',
     padding: '2px',
     marginRight: "90px"
-  }
+  };
   return (
     <div style ={styleMenu}>
       <Link to="/" style = {listLinks}>Home</Link>

@@ -5,7 +5,6 @@ import Background from '../assets/images/background.jpg';
 
 function ListOfKegs(props)
 {
-  console.log(props.OnUpdatedList);
   var outerStyling =
   {
       border: "2px solid grey",
@@ -17,7 +16,7 @@ function ListOfKegs(props)
       minWidth: '100%'
 
 
-  }
+  };
   var stlyleList =
 
     {
@@ -30,7 +29,7 @@ function ListOfKegs(props)
       border: "2px solid white",
       backgroundColor: "#918B90",
       borderRadius: "20px"
-    }
+    };
 
   return (
     <div style={outerStyling}>
@@ -59,7 +58,7 @@ ListOfKegs.propTypes =
   OnUpdatedList: PropTypes.object,
   currentRoutePath: PropTypes.string,
   OnKegSelection:PropTypes.func
-}
+};
 export default ListOfKegs;
 
 //   var list =

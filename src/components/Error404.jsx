@@ -12,14 +12,14 @@ function Error404(props){
     marginTop: "10%",
     backgroundImage: 'url(' + BackgroundPicture + ')',
 
-  }
+  };
   var head_H2 =
   {
     fontSize: "30px",
     color: "black",
     backgroundPosition: "center",
     paddingLeft: "27%"
-  }
+  };
   return (
     <div style={errorStyle}>
       <h2 style={head_H2}>The page " {props.location.pathname} " does not exist!</h2>

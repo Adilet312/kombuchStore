@@ -1,5 +1,4 @@
 import React from "react";
-import backgroundPicture from "../assets/images/background.jpg";
 import PropTypes from "prop-types";
 import Moment from 'moment';
 
@@ -32,13 +31,13 @@ function CreateKeg(props)
     backgroundColor: "#918B90",
     borderRadius: "30px",
     marginBottom: "10px"
-  }
+  };
   var head_H3 =
   {
     paddingLeft: "35%",
     paddingTop: "30px",
     fontSize: "24px",
-  }
+  };
   var nameStyle =
   {
     marginTop: "60px",
@@ -48,7 +47,7 @@ function CreateKeg(props)
     textAlign: 'left',
     marginLeft: '33%',
     fontSize: '18px'
-  }
+  };
   var brandtyle =
   {
     marginTop: "60px",
@@ -58,7 +57,7 @@ function CreateKeg(props)
     textAlign: 'left',
     marginLeft: '33%',
     fontSize: '18px'
-  }
+  };
   var priceStyle =
   {
     marginTop: "60px",
@@ -68,7 +67,7 @@ function CreateKeg(props)
     textAlign: 'left',
     marginLeft: '33%',
     fontSize: '18px'
-  }
+  };
   var alcoholContentStyle =
   {
     marginTop: "60px",
@@ -78,7 +77,7 @@ function CreateKeg(props)
     textAlign: 'left',
     marginLeft: '33%',
     fontSize: '18px'
-  }
+  };
   var imageStyle =
   {
     marginTop: "60px",
@@ -89,7 +88,7 @@ function CreateKeg(props)
     marginLeft: '33%',
     fontSize: '18px',
     outline: 'none'
-  }
+  };
   var buttonStyle =
   {
     marginTop: "60px",
@@ -101,7 +100,7 @@ function CreateKeg(props)
     fontSize: '18px',
     marginLeft: '23%',
     outline: 'none'
-  }
+  };
 
   return(
       <div>
@@ -140,5 +139,5 @@ function CreateKeg(props)
 CreateKeg.propTypes =
 {
   OnEventNewForm: PropTypes.func
-}
+};
 export default CreateKeg;

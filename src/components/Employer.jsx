@@ -7,7 +7,7 @@ function Employer(props)
   let optionalSelectedKeg = null;
   if(props.selectedKeg !=null)
   {
-    optionalSelectedKeg = <KegDetail selectedKeg = {props.OnUpdatedList[props.selectedKeg]}/>
+    optionalSelectedKeg = <KegDetail selectedKeg = {props.OnUpdatedList[props.selectedKeg]}/>;
   }
   return(
     <div>

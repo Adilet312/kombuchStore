@@ -7,7 +7,6 @@ function Navbar()
     width: "100%",
     padding: '0px',
     marginBottom: '16px',
-    border: '2px',
     backgroundColor: '#918B90',
     border: "2px solid grey",
     paddingLeft: "-10px"
@@ -25,7 +24,7 @@ function Navbar()
     fontSize: '18px',
     margin: '20px'
 
-  }
+  };
   var inputKeg =
   {
     float: 'right',
@@ -41,7 +40,7 @@ function Navbar()
     marginTop: '45px',
     margin: '20px'
 
-  }
+  };
   var image =
   {
     width: "90px",
@@ -49,7 +48,7 @@ function Navbar()
     border: "2px solid white",
     borderRadius: "50px",
     marginLeft: "16px"
-  }
+  };
   return (
      <div style={navContainer}>
      <img style = {image} src = {backgroundPicture}></img>

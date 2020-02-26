@@ -1,16 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Moment from 'moment';
 
 function Keg(props)
 {
-    var styling =
-  {
-     //   display: "block",
-     border: "2px solid #C3C5C7",
-     padding: "10px",
-     paddingBottom: "30px"
-  }
 
   var imgStyling =
   {
@@ -18,7 +10,7 @@ function Keg(props)
       padding: "10px",
       float: "right",
       marginTop: "-113px"
-  }
+  };
 
   var buttonStyling =
   {
@@ -27,7 +19,7 @@ function Keg(props)
     borderRadius: "20px",
     border: "2px solid LightBlue",
     marginLeft: "20px"
-  }
+  };
   const kegInfo =
   <div>
     <ul>
@@ -35,7 +27,7 @@ function Keg(props)
       <li>{props.brand}</li>
       <li>{props.price}</li>
       <li>{props.alcoholContent}</li>
-    </ul>
+    </ul>;
     <button style = {buttonStyling}>Add</button>
     <img style={imgStyling} src = {props.img}/>
     <hr/>
