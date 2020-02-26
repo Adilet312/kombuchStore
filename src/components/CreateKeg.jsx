@@ -25,17 +25,17 @@ function CreateKeg(props)
   var frameStyle =
   {
     width: "30%",
-    marginLeft: "600px",
+    marginLeft: "33%",
     border: '2px solid white',
     paddingBottom: "20px",
-    marginTop: "7px",
+    marginTop: "77px",
     backgroundColor: "#918B90",
     borderRadius: "30px",
     marginBottom: "10px"
   }
   var head_H3 =
   {
-    paddingLeft: "120px",
+    paddingLeft: "35%",
     paddingTop: "30px",
     fontSize: "24px",
   }
@@ -46,7 +46,7 @@ function CreateKeg(props)
     border: '2px solid LightBlue',
     borderRadius: '20px ',
     textAlign: 'left',
-    marginLeft: '100px',
+    marginLeft: '33%',
     fontSize: '18px'
   }
   var brandtyle =
@@ -56,7 +56,7 @@ function CreateKeg(props)
     border: '2px solid LightBlue',
     borderRadius: '20px ',
     textAlign: 'left',
-    marginLeft: '100px',
+    marginLeft: '33%',
     fontSize: '18px'
   }
   var priceStyle =
@@ -66,7 +66,7 @@ function CreateKeg(props)
     border: '2px solid LightBlue',
     borderRadius: '20px ',
     textAlign: 'left',
-    marginLeft: '100px',
+    marginLeft: '33%',
     fontSize: '18px'
   }
   var alcoholContentStyle =
@@ -76,7 +76,7 @@ function CreateKeg(props)
     border: '2px solid LightBlue',
     borderRadius: '20px ',
     textAlign: 'left',
-    marginLeft: '100px',
+    marginLeft: '33%',
     fontSize: '18px'
   }
   var imageStyle =
@@ -86,7 +86,7 @@ function CreateKeg(props)
     border: '2px solid LightBlue',
     borderRadius: '20px ',
     textAlign: 'left',
-    marginLeft: '100px',
+    marginLeft: '33%',
     fontSize: '18px',
     outline: 'none'
   }
@@ -99,20 +99,12 @@ function CreateKeg(props)
     borderRadius: '20px ',
     textAlign: 'center',
     fontSize: '18px',
-    marginLeft: '100px',
+    marginLeft: '23%',
     outline: 'none'
-  }
-  var outerStyling =
-  {
-      width: "100%",
-      border: "2px solid grey",
-      paddingTop: "0px",
-      backgroundColor: "#E6D4D4"
-
   }
 
   return(
-      <div style = {outerStyling}>
+      <div>
 
         <form onSubmit={handlerNewTicketForm} style={frameStyle}>
             <h3 style={head_H3}>Create New Keg</h3>

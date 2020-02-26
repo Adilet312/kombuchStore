@@ -11,11 +11,12 @@ function Employer(props)
   }
   return(
     <div>
-      {optionalSelectedKeg}
+     {optionalSelectedKeg}
       <ListOfKegs
         OnUpdatedList={props.OnUpdatedList}
         currentRoutePath={props.currentRoutePath}
         OnKegSelection={props.OnKegSelection}/>
+
     </div>
   );
 }

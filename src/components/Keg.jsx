@@ -17,7 +17,7 @@ function Keg(props)
       width: "190px",
       padding: "10px",
       float: "right",
-      marginTop: "-110px"
+      marginTop: "-113px"
   }
 
   var buttonStyling =
@@ -35,7 +35,6 @@ function Keg(props)
       <li>{props.brand}</li>
       <li>{props.price}</li>
       <li>{props.alcoholContent}</li>
-      <li>{props.formattedWaitTime} ago posted</li>
     </ul>
     <button style = {buttonStyling}>Add</button>
     <img style={imgStyling} src = {props.img}/>

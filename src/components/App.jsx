@@ -10,6 +10,7 @@ import Employer from "./Employer";
 import Moment from "moment";
 import Error404 from "./Error404";
 import {v4} from "uuid";
+import Background from '../assets/images/background.jpg';
 
 
 class App extends React.Component
@@ -60,8 +61,18 @@ class App extends React.Component
     clearInterval(this.waitTimeUpdated)
   }
  render(){
+   var styleImg =
+   {
+     backgroundImage: 'url(' + Background + ')',
+     backgroundPosition: 'fixed',
+     backgroundSize: 'cover',
+     backgroundRepeat: 'repeat',
+     minHeight: '100vh',
+     minWidth: '100%',
+     border:"2px solid grey"
+   };
     return (
-        <div>
+        <div style={styleImg}>
         <Navbar/>
         <Menu/>
           <Switch>

@@ -8,7 +8,7 @@ export default function Menu()
     width: "100%",
     height:"24px",
     backgroundColor: "#918B90",
-    marginTop: "-15px",
+    marginTop: "-16px",
     border: "2px solid grey",
 
 
@@ -24,7 +24,7 @@ export default function Menu()
   return (
     <div style ={styleMenu}>
       <Link to="/" style = {listLinks}>Home</Link>
-      <Link to="/" style = {listLinks}>About</Link>
+      <Link to="/Employer" style = {listLinks}>Employer</Link>
       <Link to="/newKeg" style = {listLinks}>Add newKeg</Link>
       <Link to="/" style = {listLinks}>Kegs</Link>
 

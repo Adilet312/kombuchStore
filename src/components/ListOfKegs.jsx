@@ -21,8 +21,8 @@ function ListOfKegs(props)
   var stlyleList =
 
     {
-      marginLeft: "500px",
-      marginTop: "6px",
+      marginLeft: "29%",
+      marginTop: "10%",
       width: "40%",
       padding: "10px",
       positive: "relative",
@@ -43,6 +43,7 @@ function ListOfKegs(props)
                         brand={keg.brand}
                         price={keg.price}
                         alcoholContent={keg.alcoholContent}
+                        img={keg.img}
                         formattedWaitTime={keg.formattedWaitTime}
                         currentRoutePath={props.currentRoutePath}
                         key={kegId}
